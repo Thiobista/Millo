@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Millo</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="header" class="header-section">
+            <div class="containerh">
+                <div class="nav">
+                    <nav>
+                        <i id="menu" class="fa-solid fa-bars open-menu" onclick="openmenu()"></i>
+                        <ul id="sidemenu" class="sidemenu">
+                            <button class="close-menu" onclick="closemenu()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <li><a href="#header" class="nav-link">Home</a></li>
+                            <li><a href="#about" class="nav-link">About</a></li>
+                            <li><a href="#services" class="nav-link">Main Products</a></li>
+                           
+                            <li><a href="#portfolio" class="nav-link">Our Works</a></li>
+                            <li><a href="#contact" class="nav-link">Contact</a></li>
+                            <li>
+                                <button id="night-mode-toggle" class="toggle-button" onclick="toggleNightMode()">
+                                    <i class="fas fa-moon"></i> Night Mode
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="text" class="header-text">
+                    <h1>
+                        Hello, We are <span class="name-highlight"></span><br>
+                        <div id="headers"></div>
+                    </h1>
+                    <br>
+                    <span id="dynamic-text" class="dynamic-text"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="ppl.jpg" alt="bi">
+                    </div>
+                    <div class="about-section">
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Us</h1>
+                            <p id="text" class="pbio">
+                                Hi, We're <span class="highlight">Millo</span>,Handcrafted items often emphasize quality, uniqueness, and the personal touch of the artisan. They may incorporate local materials and cultural heritage, reflecting the identity and creativity of the maker. Handcrafts are valued for their individuality and the craftsmanship involved, making them popular in markets that prioritize sustainability and ethical production.</p>
+                            <!-- <div class="infome">
+                                <div class="tab-titles">
+                                    <p class="tab-links active-link" onclick="opentab('Education')">Pro</p>
+                                    <p class="tab-links" onclick="opentab('Address')">Address</p>
+                                </div>
+                                <div class="tab-contents active-tab" id="Education">
+                                    <ul>
+                                        <li>Bahir Dar University</li>
+                                        <li>ALX Africa</li>
+                                        <li>FreeCodeCamp</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="Address">
+                                    <ul>
+                                        <li>Ethiopia</li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">Main Products</h1>
+                <div class="services-lists">
+                    <div>
+                      
+                        <h2>Bag</h2>
+                        <ul>
+                            <li>500 - 3000 Br</li>
+                           
+                        </ul>
+                    </div>
+                    <div>
+                        
+                        <h2>Shoes</h2>
+                        <ul>
+                            <li>1000 - 2000 Br</li>
+                            
+                        </ul>
+                    </div>
+                    <div>
+                       
+                        <h2>Rugs</h2>
+                        <ul>
+                            <li>3000 Br-10,000 Br</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- 
+        <div id="qualification">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-2">
+                        <h1 class="sub-title">Qualifications</h1>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Certifications')">Certifications</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <section class="skills" id="skills">
+                                <h3>My Skills</h3>
+                                <div class="skill-container">
+                                    <label for="html">HTML</label>
+                                    <progress id="html" value="90" max="100">90%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="css">CSS</label>
+                                    <progress id="css" value="80" max="100">80%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="js">JavaScript</label>
+                                    <progress id="js" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="C++">C++</label>
+                                    <progress id="C++" value="90" max="100">90%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="React">React</label>
+                                    <progress id="React" value="70" max="100">70%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="Vue">Vue</label>
+                                    <progress id="Vue" value="70" max="100">70%</progress>
+                                </div>
+                                <div class="skill-container">
+                                    <label for="SQL">SQL</label>
+                                    <progress id="SQL" value="70" max="100">70%</progress>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="tab-contents" id="Certifications">
+                            <ul class="certifications-list">
+                                <li class="cert-item">
+                                    <h3 class="cert-title">FreeCodeCamp Responsive Web Design Certificate</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/posts/thiobistagedefaw_im-happy-to-share-that-ive-obtained-a-new-activity-7118963079073157120-IcvC?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                                <li class="cert-item">
+                                    <h3 class="cert-title">CodSoft Web Development Internship Completion Certificate</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/posts/thiobistagedefaw_codsoft-cip-webdevelopment-activity-7144648548901351425-9Isv?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                                <li class="cert-item">
+                                    <h3 class="cert-title">Android Developer Fundamentals</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/in/thiobistagedefaw/details/certifications/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                                <li class="cert-item">
+                                    <h3 class="cert-title">Full Stack & Mobile Application Developer</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/in/thiobistagedefaw/details/certifications/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                                <li class="cert-item">
+                                    <h3 class="cert-title">Entrepreneur</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/in/thiobistagedefaw/details/certifications/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                                <li class="cert-item">
+                                    <h3 class="cert-title">Peace Ambassador</h3>
+                                    <button class="cert-button">
+                                        <a href="https://www.linkedin.com/in/thiobistagedefaw/details/certifications/" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Our Works</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="food.jpg">
+                       
+                    </div>
+                    <div class="work">
+                        <img src="song.jpg">
+                       
+                    </div>
+                    <div class="work">
+                        <img src="rick&morty.jpg">
+                      
+                    </div>
+                    <div class="work">
+                        <img src="cons.jpg">
+                       
+                    </div>
+                    <div class="work">
+                        <img src="lnd.jpg">
+                        
+                    </div>
+                    <div class="work">
+                        <img src="mag.jpg">
+                      
+                    </div> 
+                </div>
+                <button id="showButton" onclick="hideButton()">See More...</button>
+                <div id="hiddenContent" class="hidden">
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="nutr.jpg">
+                           
+                        </div>
+                        <div class="work">
+                            <img src="cafe.jpg">
+                           
+                        </div> 
+                        <div class="work">
+                            <img src="cal.jpg">
+                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Us</h1>
+                        <p><i id="op" class="fa-solid fa-envelope"></i>millohandcraft@gmail.com</p>
+                        <p><i id="op" class="fa-solid fa-phone"></i>+251943234303</p>
+                        <div class="social-icons">
+                            <a href="https://t.me/millo"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="https://www.linkedin.com/in/millo/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://instagram.com/millo?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100094136316243&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form id="contact-form" action="http://localhost:8080/send-email" method="POST">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" placeholder="Your Message" rows="6" required></textarea>
+                            <button id="submitButton" type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright Thiobista
+            </div>
+        </div>
+    </body>
+</html>
